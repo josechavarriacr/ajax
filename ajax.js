@@ -5,14 +5,13 @@ document.getElementById("ajax").addEventListener("click", ajaxFn);
     //Call the open function, GET-type of request, url, true-asynchronous
     xhr.open('GET', 'https://api.github.com/users', true)
     //call the onload
-    xhr.onload = function()
-        {
+    xhr.onload = function() {
             //check if the status is 200(means everything is okay)
-            if (this.status === 200)
-                {
+            if (this.status === 200) {
                     //return server response as an object with JSON.parse
                     console.log(JSON.parse(this.responseText));
-        }
+                    // TODO:print in table html 
+                    }
                 }
     //call send
     xhr.send();
